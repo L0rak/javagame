@@ -9,6 +9,12 @@ public class Constants {
         public static final int DOWN = 3;
     }
     public static class PlayerConstants {
+        public static final int Pirate = 0;
+        public static final int Mage = 1;
+
+        public static final String pirate_path = "/res/player_sprites.png";
+        public static final String mage_path = "/res/mage_sprites.png";
+
         public static final int IDLE = 0;
         public static final int RUNNING = 1;
         public static final int JUMP = 2;
@@ -39,6 +45,13 @@ public class Constants {
                     return 1;
             }
         }
+        public static int GetPlayerClass(int player_class) {
+            switch (player_class) {
+                case Mage:
+                    return 1;
+                default:
+                    return 0;
+            }
+        }
     }
-
 }
