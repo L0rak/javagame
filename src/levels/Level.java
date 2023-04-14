@@ -9,4 +9,8 @@ public class Level {
     public int getSpriteInder(int x, int y) {
         return lvlData[y][x];
     }
+
+    public int[][] getLevelData() {
+        return lvlData;
+    }
 }
