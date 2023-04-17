@@ -23,7 +23,7 @@ public class Player extends Entity{
     private boolean moving = false;
     private boolean attacking = false;
     private boolean left, up, right, down, jump;
-    private float playerSpeed = 2.3f;
+    private float playerSpeed = 1.3f * Game.SCALE;
     private int[][] lvlData;
     private float xDrawOffset = 21 * Game.SCALE; //odleglosc poczatku rogu hitboxu od poczatku obrazka
     private float yDrawOffset = 4 * Game.SCALE;
@@ -38,7 +38,7 @@ public class Player extends Entity{
     public Player(float x, float y, int width, int height) {
         super(x, y, width, height);
         loadAnimations();
-        initHitbox(x, y, 20*Game.SCALE, 27*Game.SCALE); // wielkosc hitboxu
+        initHitbox(x, y, (int)(20*Game.SCALE), (int)(27*Game.SCALE)); // wielkosc hitboxu
     }
 
     private String setClass(int setClass) {
